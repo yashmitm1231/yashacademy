@@ -1,0 +1,1109 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+
+    <title>POS</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/datepicker.css" rel="stylesheet">
+    <link href="css/font-awesome.css" rel="stylesheet">
+    <link href="css/bootstrap-modal-bs3patch.css" rel="stylesheet">
+    <link href="css/bootstrap-modal.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <div id="main-content">
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container-fluid">
+        <ul class="nav navbar-nav navbar-user col-lg-12 col-md-12 col-sm-12">
+          <li class="col-lg-2 col-md-2 col-sm-2">
+          <div class="navbar-header">
+            <a href="#" class="navbar-brand"><img src="images/logo.png" alt="Company Logo"></a>
+          </div>
+          </li>
+          <li class="col-lg-8 col-md-8 col-sm-8">
+            <div class="btn-group">
+              <button type="button" class="btn btn-lg btn-danger dropdown-toggle btn-top-size" data-toggle="dropdown">
+                Invoices <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu custom-dropdown" role="menu">
+                <li class="btn btn-danger btn-block"><a href="#">Invoice Type 1</a></li>
+                <li class="btn btn-danger btn-block"><a href="#">Invoice Type 2</a></li>
+                <li class="btn btn-danger btn-block"><a href="#">Invoice Type 3</a></li>
+                <li class="btn btn-danger btn-block"><a href="#">Invoice Type 4</a></li>
+              </ul>
+            </div>
+            <div class="btn-group">
+              <button type="button" class="btn btn-lg btn-danger dropdown-toggle btn-top-size" data-toggle="dropdown">
+                Look-Up <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu custom-dropdown" role="menu">
+                <li class="btn btn-danger btn-block"><a href="#">Look-Up Type 1</a></li>
+                <li class="btn btn-danger btn-block"><a href="#">Look-Up Type 2</a></li>
+                <li class="btn btn-danger btn-block"><a href="#">Look-Up Type 3</a></li>
+                <li class="btn btn-danger btn-block"><a href="#">Look-Up Type 4</a></li>
+              </ul>
+            </div>
+            <div class="btn-group">
+              <button type="button" class="btn btn-lg btn-danger dropdown-toggle btn-top-size" data-toggle="dropdown">
+                Item Action <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu custom-dropdown" role="menu">
+                <li class="btn btn-danger btn-block"><a href="#" data-toggle="modal" title="Shift Begin Details" data-dialog-href="#shift-begin">Shift Begin</a></li>
+                <li class="btn btn-danger btn-block"><a href="#" data-toggle="modal" title="Day Begin Details" data-dialog-href="#day-begin">Day Begin</a></li>
+                <li class="btn btn-danger btn-block"><a href="#" data-toggle="modal" title="Original Invoice Details" data-dialog-href="#return-item">Return Item</a></li>
+                <li class="btn btn-danger btn-block"><a href="#" data-toggle="modal" title="Advance Invoice" data-dialog-href="#advance-invoice">Advance Invoice</a></li>
+                <li class="btn btn-danger btn-block"><a href="#" data-toggle="modal" title="Enter Old Invoice No" data-dialog-href="#sales-against-adv-inv">Sales Against Advance Invoice</a></li>
+                <li class="btn btn-danger btn-block"><a href="#" data-toggle="modal" title="Delivery LookUp" data-dialog-href="#delivery-lookUp">Delivery LookUp</a></li>
+              </ul>
+              <div id="delivery-lookUp" style="display:none;">
+                <form method="post" action="" class="requireValidation" novalidate="novalidate">
+                <div class="form-group row">
+	              <div class="col-lg-3 col-md-3 col-sm-3">
+	                <label for="salePersonCode">salePersonCode</label>
+	                <input type="text" data-label="salePersonCode" name="salePersonCode" class="form-control" id="salePersonCode" tabindex="2">
+	              </div>
+	              <div class="col-lg-3 col-md-3 col-sm-3">
+	                <label for="itemName">itemName</label>
+	                <input type="text" data-label="itemName" name="itemName" class="form-control" id="itemName" tabindex="3">
+	              </div>
+	              <div class="col-lg-3 col-md-3 col-sm-3">
+	                <label for="srNo">srNo</label>
+	                <input type="text" data-label="First Name" name="srNo" class="form-control" id="srNo" tabindex="4">
+	              </div>
+	              <div class="col-lg-3 col-md-3 col-sm-3">
+	                <label for="firstName">firstName</label>
+	                <input type="text" data-label="firstName" name="firstName" class="form-control" id="firstName" tabindex="5">
+	              </div>
+	            </div>
+	            <div class="form-group row">
+	              <div class="col-lg-3 col-md-3 col-sm-3">
+	                <label for="lastName">lastName</label>
+	                <input type="text" data-label="lastName" name="lastName" class="form-control" id="lastName" tabindex="6">
+	              </div>
+	              <div class="col-lg-3 col-md-3 col-sm-3">
+	                <label for="deliveryType">deliveryType</label>
+	                <input type="text" data-label="deliveryType" name="deliveryType" class="form-control" id="deliveryType" tabindex="7">
+	              </div>
+	              <div class="col-lg-3 col-md-3 col-sm-3">
+	                <label for="routes">routes</label>
+	                <select class="form-control" data-label="routes" name="routes" id="routes" tabindex="8">
+	                  <option>Male</option>
+	                  <option>Female</option>
+	                </select>
+	              </div>
+	              <div class="col-lg-3 col-md-3 col-sm-3">
+	                <label for="locationEntryTime">locationEntryTime</label>
+	                <input type="text" data-label="locationEntryTime" name="locationEntryTime" class="form-control" id="locationEntryTime" tabindex="9">
+	              </div>
+	            </div>
+	            <div class="form-group row">
+	              <div class="col-lg-3 col-md-3 col-sm-3">
+	                <label for="deliveryDate">deliveryDate</label>
+	                <input type="text" data-label="deliveryDate" name="deliveryDate" class="form-control" id="deliveryDate" tabindex="10">
+	              </div>
+	              <div class="col-lg-3 col-md-3 col-sm-3">
+	                <label for="ageBracket">ageBracket</label>
+	                <input type="text" data-label="ageBracket" name="ageBracket" class="form-control" id="ageBracket" tabindex="11">
+	              </div>
+	              <div class="col-lg-3 col-md-3 col-sm-3">
+	                <label for="dob">Date Of Birth</label>
+	                <input type="text" data-label="Date Of Birth" name="dob" class="form-control" id="dob" tabindex="12">
+	              </div>
+	              <div class="col-lg-3 col-md-3 col-sm-3">
+	                <label for="address1">address1</label>
+	                <input type="text" data-label="address1" name="address1" class="form-control" id="address1" tabindex="13">
+	              </div>
+	            </div>
+	            <div class="form-group row">
+	              <div class="col-lg-3 col-md-3 col-sm-3">
+	                <label for="address2">address2</label>
+	                <input type="text" data-label="address2" name="address2" class="form-control" id="address2" tabindex="14">
+	              </div>
+	              <div class="col-lg-3 col-md-3 col-sm-3">
+	                <label for="landmark">landmark</label>
+	                <input type="text" data-label="landmark" name="landmark" class="form-control" id="landmark" tabindex="15">
+	              </div>
+	              <div class="col-lg-3 col-md-3 col-sm-3">
+	                <label for="location">location</label>
+	                <input type="text" data-label="location" name="location" class="form-control" id="location" tabindex="16">
+	              </div>
+	              <div class="col-lg-3 col-md-3 col-sm-3">
+	                <label for="city">city</label>
+	                <input type="text" data-label="city" name="city" class="form-control" id="city" tabindex="17">
+	              </div>
+	            </div>
+	            <div class="form-group row">
+	              <div class="col-lg-3 col-md-3 col-sm-3">
+	                <label for="pinCode">pinCode</label>
+	                <input type="text" data-label="pinCode" name="pinCode" class="form-control" id="pinCode" tabindex="18">
+	              </div>
+	              <div class="col-lg-3 col-md-3 col-sm-3">
+	                <label for="priorityInstruction">priorityInstruction</label>
+	                <input type="text" data-label="priorityInstruction" name="priorityInstruction" class="form-control" id="priorityInstruction" tabindex="19">
+	              </div>
+	              <div class="col-lg-3 col-md-3 col-sm-3">
+	                <label for="deliveryInstruction">deliveryInstruction</label>
+	                <input type="text" data-label="deliveryInstruction" name="deliveryInstruction" class="form-control" id="deliveryInstruction" tabindex="20">
+	              </div>
+	              <div class="col-lg-3 col-md-3 col-sm-3">
+	                <label for="extectedInstallationDate">extectedInstallationDate</label>
+	                <input type="text" data-label="extectedInstallationDate" name="extectedInstallationDate" class="form-control" id="extectedInstallationDate" tabindex="21">
+	              </div>
+	            </div>
+	            <div class="form-group row">
+	              <div class="col-lg-3 col-md-3 col-sm-3">
+	                <label for="expectedDemoDate">expectedDemoDate</label>
+	                <input type="text" data-label="expectedDemoDate" name="expectedDemoDate" class="form-control" id="expectedDemoDate" tabindex="22">
+	              </div>
+	              <div class="col-lg-3 col-md-3 col-sm-3">
+	                <label for="deliveryTimeFrom">deliveryTimeFrom</label>
+	                <input type="text" data-label="deliveryTimeFrom" name="deliveryTimeFrom" class="form-control" id="deliveryTimeFrom" tabindex="23">
+	              </div>
+	              <div class="col-lg-3 col-md-3 col-sm-3">
+	                <label for="deliveryTimeTo">deliveryTimeTo</label>
+	                <input type="text" data-label="deliveryTimeTo" name="deliveryTimeTo" class="form-control" id="deliveryTimeTo" tabindex="24">
+	              </div>
+	              <div class="col-lg-3 col-md-3 col-sm-3">
+	                <label for="installationtimeFrom">installationtimeFrom</label>
+	                <input type="text" data-label="installationtimeFrom" name="installationtimeFrom" class="form-control" id="installationtimeFrom" tabindex="25">
+	              </div>
+	            </div>
+	            <div class="form-group row">
+	              <div class="col-lg-3 col-md-3 col-sm-3">
+	                <label for="installationtimeTo">installationtimeTo</label>
+	                <input type="text" data-label="installationtimeTo" name="installationtimeTo" class="form-control" id="installationtimeTo" tabindex="26">
+	              </div>
+	              <div class="col-lg-3 col-md-3 col-sm-3">
+	                <label for="demotimeFrom">demotimeFrom</label>
+	                <input type="text" data-label="demotimeFrom" name="demotimeFrom" class="form-control" id="demotimeFrom" tabindex="27">
+	              </div>
+	              <div class="col-lg-3 col-md-3 col-sm-3">
+	                <label for="demoTimeTo">demoTimeTo</label>
+	                <input type="text" data-label="demoTimeTo" name="demoTimeTo" class="form-control" id="demoTimeTo" tabindex="28">
+	              </div>
+	              <div class="col-lg-3 col-md-3 col-sm-3">
+	                <label for="installationFlag">installationFlag</label>
+	                <input type="text" data-label="installationFlag" name="installationFlag" class="form-control" id="installationFlag" tabindex="29">
+	              </div>
+	            </div>
+	            <div class="form-group row">
+	              <div class="col-lg-3 col-md-3 col-sm-3">
+	                <label for="demoFlag">demoFlag</label>
+	                <input type="text" data-label="demoFlag" name="demoFlag" class="form-control" id="demoFlag" tabindex="30">
+	              </div>
+	              <div class="col-lg-3 col-md-3 col-sm-3">
+                    <label for="priorityFlag">priorityFlag</label>
+                    <input type="text" data-label="priorityFlag" name="priorityFlag" class="form-control" id="priorityFlag" tabindex="30">
+                  </div>
+                  <div class="col-lg-3 col-md-3 col-sm-3">
+                    <label for="billAddress1">billAddress1</label>
+                    <input type="text" data-label="billAddress1" name="billAddress1" class="form-control" id="demoFlag" tabindex="30">
+                  </div>
+                  <div class="col-lg-3 col-md-3 col-sm-3">
+                    <label for="billAddress2">billAddress2</label>
+                    <input type="text" data-label="billAddress2" name="billAddress2" class="form-control" id="billAddress2" tabindex="30">
+                  </div>
+	             </div>
+	             <div class="form-group row">
+                  <div class="col-lg-3 col-md-3 col-sm-3">
+                    <label for="billLocation">billLocation</label>
+                    <input type="text" data-label="billLocation" name="billLocation" class="form-control" id="billLocation" tabindex="30">
+                  </div>
+                  <div class="col-lg-3 col-md-3 col-sm-3">
+                    <label for="billCity">billCity</label>
+                    <input type="text" data-label="billCity" name="billCity" class="form-control" id="billCity" tabindex="30">
+                  </div>
+                  <div class="col-lg-3 col-md-3 col-sm-3">
+                    <label for="billPincode">billPincode</label>
+                    <input type="text" data-label="billPincode" name="billPincode" class="form-control" id="demoFlag" tabindex="30">
+                  </div>
+                  <div class="col-lg-3 col-md-3 col-sm-3">
+                    <label for="pickupRemark">pickupRemark</label>
+                    <input type="text" data-label="pickupRemark" name="pickupRemark" class="form-control" id="pickupRemark" tabindex="30">
+                  </div>
+                 </div>
+                 <div class="form-group row">
+                  <div class="col-lg-3 col-md-3 col-sm-3">
+                    <label for="pickupFlag">pickupFlag</label>
+                    <input type="text" data-label="pickupFlag" name="pickupFlag" class="form-control" id="pickupFlag" tabindex="30">
+                  </div>
+                  <div class="col-lg-3 col-md-3 col-sm-3">
+                    <label for="deliveryTypeEnabled">deliveryTypeEnabled</label>
+                    <input type="text" data-label="deliveryTypeEnabled" name="deliveryTypeEnabled" class="form-control" id="deliveryTypeEnabled" tabindex="30">
+                  </div>
+                 </div>
+		         <div class="form-group row">
+		           <div class="col-lg-3 col-md-3 col-sm-3">
+		             <button type="submit" class="btn btn-danger relative" tabIndex="8">
+		               Add
+		             </button>
+		           </div>
+		         </div>
+        </form>
+              </div>
+              <div id="day-begin" style="display:none">
+                <form class="form-horizontal" role="form" method="post" action="">
+                  <div class="form-group">
+                    <label for="autoPopulateDate" class="col-sm-4 control-label">Auto populate date</label>
+                    <div class="col-sm-8">
+                      <div class="input-group date" data-date-format="dd-mm-yyyy" data-date="01-01-2014">
+                        <input id="autoPopulateDate" class="form-control" type="text" readonly="" size="14" />
+                        <span class="input-group-addon add-on">
+                          <span class="glyphicon glyphicon-calendar"></span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="col-sm-8 col-sm-offset-4">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Shift End</button>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Till End</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              
+              <div id="shift-begin" style="display:none">
+                <form class="form-horizontal" role="form">
+                  <div class="form-group">
+                    <label for="shiftNo" class="col-sm-4 control-label">Shift No</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control" id="shiftNo"/>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="shiftAmount" class="col-sm-4 control-label">Shift Amount</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control" id="shiftAmount"/>
+                    </div>
+                  </div>
+                <div class="form-group">
+                  <div class="col-sm-8 col-sm-offset-4">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Ok</button>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+              
+            <div id="return-item" style="display:none">
+              <dl class="dl-horizontal">
+                <dt>Sys Invoice No</dt>
+                <dd>SLF07A02123</dd>
+                <dt>Date</dt>
+                <dd>26-05-2011</dd>
+                <dt>Time</dt>
+                <dd>06:14:57</dd>
+                <dt>Shift No</dt>
+                <dd>1</dd>
+                <dt>Cashier Name</dt>
+                <dd>250670</dd>
+              </dl>
+              <table class="table table-bordered table-fixed" data-fixed-height="290">
+                <thead>
+                  <tr>
+                    <th>EAN</th>
+                    <th>Item Code</th>
+                    <th>Quantity</th>
+                    <th>Total Amount</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>AC1010</td>
+                    <td>100005</td>
+                    <td class="text-right">1</td>
+                    <td class="text-right">13,994</td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="control-group">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Colse-F4</button>
+              </div>
+            </div>
+            <div id="advance-invoice" style="display:none">
+              <form class="form-horizontal" role="form">
+                <div class="form-group">
+                  <label for="paymentDate" class="col-sm-4 control-label">Expected Payment Date</label>
+                  <div class="col-sm-8">
+                    <div class="input-group date" data-date-format="dd-mm-yyyy" data-date="01-01-2014">
+                      <input id="paymentDate" class="form-control" type="text" readonly="" size="14" />
+                      <span class="input-group-addon add-on">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="col-sm-offset-4 col-sm-8">
+                    <div class="checkbox">
+                      <label>
+                        <input type="checkbox"> Allowed Payment Below Limit
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="col-sm-offset-4 col-sm-8">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Ok</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div id="sales-against-adv-inv" style="display:none">
+              <form class="form-horizontal" role="form">
+                <div class="form-group">
+                  <label for="invoiceNo" class="col-sm-6 control-label">Enter Old Invoice No</label>
+                  <div class="col-sm-6">
+                    <input type="text" class="form-control" id="invoiceNo"/>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="col-sm-offset-4 col-sm-8">
+                    <button type="button" class="btn btn-info" data-dismiss="modal">Go</button>
+                    <button type="button" class="btn btn-info" data-dismiss="modal">Scan</button>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Clear-F3</button>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel-F4</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+            </div>
+            <div class="btn-group">
+              <button type="button" class="btn btn-lg btn-danger dropdown-toggle btn-top-size" data-toggle="dropdown">
+                Bill Action <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu custom-dropdown" role="menu">
+                <li class="btn btn-danger btn-block"><a href="#" data-toggle="modal" title="Bill Lookup Details" data-dialog-href="#bill-lookup">Bill Look Up</a></li>
+                <li class="btn btn-danger btn-block"><a href="#" data-toggle="modal" title="Customer Details" data-dialog-href="#customer-lookup">Customer Look Up</a></li>
+              </ul>
+              <div id="customer-lookup" style="display:none;">
+                <form class="form-horizontal" role="form" method="post" action="">
+                  <div class="form-group row">
+                    <div class="col-sm-4 col-md-4 col-lg-4">
+                      <label for="fname" class="control-label">fname</label>
+                        <input name="fname" id="fname" class="form-control" type="text"/>
+                    </div>
+                    <div class="col-sm-4 col-md-4 col-lg-4">
+                      <label for="lname" class="control-label">lname</label>
+                      <input name="lname" id="lname" class="form-control" type="text"/>
+                    </div>
+                    <div class="col-sm-4 col-md-4 col-lg-4">
+                      <label for="pmobile" class="control-label">pmobile</label>
+                        <input name="pmobile" id="pmobile" class="form-control" type="text"/>
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <div class="col-sm-4 col-md-4 col-lg-4">
+                      <label for="pemail" class="control-label">pemail</label>
+                        <input name="pemail" id="pemail" class="form-control" type="text"/>
+                    </div>
+                    <div class="col-sm-4 col-md-4 col-lg-4">
+                      <label for="city" class="control-label">city</label>
+                      <input name="city" id="city" class="form-control" type="text"/>
+                    </div>
+                    <div class="col-sm-4 col-md-4 col-lg-4">
+                      <label for="sal" class="control-label">sal</label>
+                        <input name="sal" id="sal" class="form-control" type="text"/>
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <div class="col-sm-4 col-md-4 col-lg-4">
+                      <label for="pan" class="control-label">pan</label>
+                        <input name="pan" id="pan" class="form-control" type="text"/>
+                    </div>
+                    <div class="col-sm-4 col-md-4 col-lg-4">
+                      <label for="uid" class="control-label">uid</label>
+                      <input name="uid" id="uid" class="form-control" type="text"/>
+                    </div>
+                    <div class="col-sm-4 col-md-4 col-lg-4">
+                      <label for="email" class="control-label">email</label>
+                        <input name="email" id="email" class="form-control" type="text"/>
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <div class="col-sm-4 col-md-4 col-lg-4">
+                      <label for="landlineno" class="control-label">landlineno</label>
+                        <input name="landlineno" id="landlineno" class="form-control" type="text"/>
+                    </div>
+                    <div class="col-sm-4 col-md-4 col-lg-4">
+                      <label for="company" class="control-label">company</label>
+                      <input name="company" id="company" class="form-control" type="text"/>
+                    </div>
+                    <div class="col-sm-4 col-md-4 col-lg-4">
+                      <label for="companyflg" class="control-label">companyflg</label>
+                        <input name="companyflg" id="companyflg" class="form-control" type="text"/>
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <div class="col-sm-4 col-md-4 col-lg-4">
+                      <label for="gender" class="control-label">gender</label>
+                      <select class="form-control" data-label="Gender" name="gender" id="gender" tabindex="8">
+                        <option>Male</option>
+                        <option>Female</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <div class="col-sm-6 col-md-6 col-lg-6">
+                      <button type="submit" class="btn btn-danger">Add</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div id="bill-lookup" style="display:none;">
+                <form class="form-horizontal" role="form" method="post" action="">
+                  <div class="form-group row">
+                    <div class="col-sm-6 col-md-6 col-lg-6">
+                      <label for="fromDate" class="control-label">From Date</label>
+                      <div class="input-group date" data-date-format="dd-mm-yyyy" data-date="01-01-2014">
+                        <input name="fromDate" id="fromDate" class="form-control" type="text" readonly="" />
+                        <span class="input-group-addon add-on">
+                          <span class="glyphicon glyphicon-calendar"></span>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="col-sm-6 col-md-6 col-lg-6">
+                      <label for="autoPopulateDate" class="control-label">To Date</label>
+                      <div class="input-group date" data-date-format="dd-mm-yyyy" data-date="01-01-2014">
+                        <input name="toDate" id="toDate" class="form-control" type="text" readonly="" />
+                        <span class="input-group-addon add-on">
+                          <span class="glyphicon glyphicon-calendar"></span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <div class="col-sm-6 col-md-6 col-lg-6">
+                      <label for="fromTime">fromTime</label>
+                      <input type="text" name="fromTime" class="form-control" id="fromTime">
+                    </div>
+                    <div class="col-sm-6 col-md-6 col-lg-6">
+                      <label for="toTime">toTime</label>
+                      <input type="text" name="toTime" class="form-control" id="toTime">
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <div class="col-sm-6 col-md-6 col-lg-6">
+                      <label for="invoiceTitle">invoiceTitle</label>
+                      <input type="text" name="invoiceTitle" class="form-control" id="invoiceTitle">
+                    </div>
+                    <div class="col-sm-6 col-md-6 col-lg-6">
+                      <label for="tenderName">tenderName</label>
+                      <input type="text" name="tenderName" class="form-control" id="tenderName">
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <div class="col-sm-6 col-md-6 col-lg-6">
+                      <button type="submit" class="btn btn-danger">Add</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="btn-group">
+              <button type="button" class="btn btn-lg btn-danger dropdown-toggle btn-top-size" data-toggle="dropdown">
+                Cashier <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu custom-dropdown" role="menu">
+                <li class="btn btn-danger btn-block"><a href="#">Cashier Type 1</a></li>
+                <li class="btn btn-danger btn-block"><a href="#">Cashier Type 2</a></li>
+                <li class="btn btn-danger btn-block"><a href="#">Cashier Type 3</a></li>
+                <li class="btn btn-danger btn-block"><a href="#">Cashier Type 4</a></li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="dropdown user-dropdown col-lg-2 col-md-2 col-sm-2">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> John Smith <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><a href="#"><i class="fa fa-user"></i> Profile</a></li>
+              <li><a href="#"><i class="fa fa-gear"></i> Settings</a></li>
+              <li class="divider"></li>
+              <li><a href="#"><i class="fa fa-power-off"></i> Log Out</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div id="wrapper">
+    
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-12 col-lg-5 col-md-5">
+            <div class="panel panel-default panel-fixed-height">
+              <div class="panel-heading">
+                <span class="panel-title">
+                  Invoice Detail
+                </span>
+              </div>
+              <div class="panel-body bg-danger">
+                <ul class="thumbnail invoice-tiles list-unstyled clearfix">
+                  <li class="thumbnail col-sm-12 col-lg-7 col-md-7 bg-danger">
+                    <dl class="dl-horizontal dl-small">
+                      <dt>Invoice #</dt>
+                      <dd>POSMMMMMMMMMMMMMMMMM</dd>
+                      <dt>Till Number</dt>
+                      <dd>TN12345</dd>
+                      <dt>Store #</dt>
+                      <dd>
+                        A101
+                      </dd>
+                      <dt>Date</dt>
+                      <dd>06-12-2014 01:29 AM</dd>
+                    </dl>
+                  </li>
+                  <li class="thumbnail col-sm-12 col-lg-5 col-md-5 bg-danger">
+                    <dl class="dl-horizontal dl-small">
+                      <dt>Sub Total</dt>
+                      <dd>$52.49</dd>
+                      <dt>Discount</dt>
+                      <dd>$0.00</dd>
+                      <dt>Tax</dt>
+                      <dd>$2.23</dd>
+                    </dl>
+                  </li>
+                  <li class="thumbnail col-sm-12 col-lg-7 col-md-7 bg-danger">
+                    <dl class="dl-horizontal dl-small">
+                      <dt>Shift #</dt>
+                      <dd>SH101</dd>
+                      <dt>Customer Name</dt>
+                      <dd>
+                        HONARABLE Mike Faning AND YASHWANT DHAKD FROM INDORE INDIA
+                      </dd>
+                    </dl>
+                  </li>
+                  <li class="thumbnail col-sm-12 col-lg-5 col-md-5 bg-danger">
+                    <dl class="dl-horizontal dl-small">
+                      <dt>Total</dt>
+                      <dd>$54.72</dd>
+                      <dt>Paid</dt>
+                      <dd>$54.72</dd>
+                      <span>
+                        <dt>Due</dt>
+                        <dd>$0.00</dd>
+                      </span>
+                    </dl>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="panel panel-default bg-danger">
+              <div class="panel-body">
+              <ul class="list-unstyled list-inline">
+                <li>Total Quantity:</li>
+                <li><input type="text" name="quantity" size="4"/></li><li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+                <li class="text-right">Sub Total:</li>
+                <li><input type="text" name="subtotal" size="4"/></li>
+              </ul>
+              <button type="button" class="btn btn-lg btn-danger btn-fix-size">Close Bill</button>
+              <button type="button" class="btn btn-lg btn-danger btn-fix-size">Payment Preview</button>
+              <button type="button" class="btn btn-lg btn-danger btn-fix-size" disabled="disabled">Cash</button>
+              <button type="button" class="btn btn-lg btn-danger btn-fix-size" disabled="disabled">Credit Note</button>
+              <button type="button" class="btn btn-lg btn-danger btn-fix-size" disabled="disabled">Gift Card</button>
+              <button type="button" class="btn btn-lg btn-danger btn-fix-size" disabled="disabled">Check</button>
+              <button type="button" class="btn btn-lg btn-danger btn-fix-size" disabled="disabled">EDC Card</button>
+              <button type="button" class="btn btn-lg btn-danger btn-fix-size" disabled="disabled">Card</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-lg-7 col-md-7">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <span class="panel-title">Invoice Items</span>
+              </div>
+              <div class="panel-body">
+                <ul class="list-unstyled list-inline">
+                  <li>
+                    <form class="form-inline" role="form">
+                      <div class="form-group">
+                        <label class="sr-only" for="itemNumber">Enter Item</label>
+                        <input type="text" class="form-control" id="itemNumber" placeholder="Enter Item">
+                      </div>
+                      <button type="submit" class="btn btn-danger">Add</button>
+                    </form>
+                  </li>
+                  <li>
+                    <button class="btn btn-danger" data-toggle="modal" data-dialog-href="/home/yash/POS/SelectItem.html">Search</button>
+                  </li>
+                  <li>
+                    <button class="btn btn-danger" data-toggle="modal" data-dialog-href="file:///home/yash/POS/AddCustomer.html" title="Add Customer">
+                      Customer
+                    </button>
+                  </li>
+                </ul>
+              </div>
+              <table class="table table-bordered table-fixed" data-fixed-height="500">
+                <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>Item Code</th>
+                    <th>Description</th>
+                    <th class="col-fixed-width">Qty</th>
+                    <th>Price</th>
+                    <th>Total</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="text-lg">1</td>
+                    <td>10304</td>
+                    <td>Plaid Western Shirt-Small-Black</td>
+                    <td class="col-fixed-width"><span class="item-qty-0">2</span><span class="item-qty-0" style="display:none;"><input name="quantity" value="2" size="5"/></span></td>
+                    <td class="col-fixed-width"><span class="item-qty-0">$26.24</span><span class="item-qty-0" style="display:none;"><input name="price" value="26.24" size="4"/></span></td>
+                    <td>$52.49</td>
+                    <td>
+                      <ul class="list-unstyled list-inline item-qty-0">
+                        <li>
+                          <button type="submit" class="btn-link relative" title="Edit" data-toggle-display=".item-qty-0">
+                            <i class="fa fa-pencil-square-o"></i>
+                          </button>
+                        </li>
+                        <li>
+                          <form method="post" action="#">
+                            <button type="submit" class="btn-link delete-item" title="Delete"><i class="fa fa-trash-o"></i></button>
+                          </form>
+                          
+                        </li>
+                      </ul>
+                      <ul class="list-unstyled list-inline item-qty-0" style="display:none;">
+                        <li>
+                          <form method="post" action="#">
+                            <button type="submit" class="btn-link relative" title="Save">
+                              <i class="fa fa-floppy-o"></i>
+                            </button>
+                          </form>
+                        </li>
+                        <li>
+                          <button class="btn-link relative" data-toggle-display=".item-qty-0" title="Cancel Edit">
+                            <i class="fa fa-times"></i>
+                          </button>
+                        </li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="text-lg">2</td>
+                    <td>10304</td>
+                    <td>Plaid Western Shirt-Small-Black</td>
+                    <td class="col-fixed-width"><span class="item-qty-1">2</span><span class="item-qty-1" style="display:none;"><input name="quantity" value="2" size="4"/></span></td>
+                    <td class="col-fixed-width"><span class="item-qty-1">$26.24</span><span class="item-qty-1" style="display:none;"><input name="price" value="26.24" size="6"/></span></td>
+                    <td>$52.49</td>
+                    <td>
+                      <ul class="list-unstyled list-inline item-qty-1">
+                        <li>
+                          <button type="submit" class="btn-link relative" title="Edit" data-toggle-display=".item-qty-1">
+                            <i class="fa fa-pencil-square-o"></i>
+                          </button>
+                        </li>
+                        <li>
+                          <form method="post" action="#">
+                            <button type="submit" class="btn-link delete-item" title="Delete"><i class="fa fa-trash-o"></i></button>
+                          </form>
+                        </li>
+                      </ul>
+                      <ul class="list-unstyled list-inline item-qty-1" style="display:none;">
+                        <li>
+                          <form method="post" action="#">
+                            <button type="submit" class="btn-link relative" title="Save">
+                              <i class="fa fa-floppy-o"></i>
+                            </button>
+                          </form>
+                        </li>
+                        <li>
+                          <button class="btn-link relative" data-toggle-display=".item-qty-1" title="Cancel Edit">
+                            <i class="fa fa-times"></i>
+                          </button>
+                        </li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="text-lg">3</td>
+                    <td>10304</td>
+                    <td>Plaid Western Shirt-Small-Black</td>
+                    <td class="col-fixed-width"><span class="item-qty-2">2</span><span class="item-qty-2" style="display:none;"><input name="quantity" value="2" size="4"/></span></td>
+                    <td class="col-fixed-width"><span class="item-qty-2">$26.24</span><span class="item-qty-2" style="display:none;"><input name="price" value="26.24" size="4"/></span></td>
+                    <td>$52.49</td>
+                    <td>
+                      <ul class="list-unstyled list-inline item-qty-2">
+                        <li>
+                          <button type="submit" class="btn-link relative" title="Edit" data-toggle-display=".item-qty-2">
+                            <i class="fa fa-pencil-square-o"></i>
+                          </button>
+                        </li>
+                        <li>
+                            <button type="submit" class="btn-link delete-item" title="Delete"><i class="fa fa-trash-o"></i></button>
+                        </li>
+                      </ul>
+                      <ul class="list-unstyled list-inline item-qty-2" style="display:none;">
+                        <li>
+                          <form method="post" action="#">
+                            <button type="submit" class="btn-link relative" title="Save">
+                              <i class="fa fa-floppy-o"></i>
+                            </button>
+                          </form>
+                        </li>
+                        <li>
+                          <button class="btn-link relative" data-toggle-display=".item-qty-2" title="Cancel Edit">
+                            <i class="fa fa-times"></i>
+                          </button>
+                        </li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="text-lg">4</td>
+                    <td>10304</td>
+                    <td>Plaid Western Shirt-Small-Black</td>
+                    <td class="col-fixed-width"><span class="item-qty-3">2</span><span class="item-qty-3" style="display:none;"><input name="quantity" value="2" size="4"/></span></td>
+                    <td class="col-fixed-width"><span class="item-qty-3">$26.24</span><span class="item-qty-3" style="display:none;"><input name="price" value="26.24" size="4"/></span></td>
+                    <td>$52.49</td>
+                    <td>
+                      <ul class="list-unstyled list-inline item-qty-3">
+                        <li>
+                          <button type="submit" class="btn-link relative" title="Edit" data-toggle-display=".item-qty-3">
+                            <i class="fa fa-pencil-square-o"></i>
+                          </button>
+                        </li>
+                        <li>
+                          <button type="submit" class="btn-link delete-item" title="Delete"><i class="fa fa-trash-o"></i></button>
+                        </li>
+                      </ul>
+                      <ul class="list-unstyled list-inline item-qty-3" style="display:none;">
+                        <li>
+                          <form method="post" action="#">
+                            <button type="submit" class="btn-link relative" title="Save">
+                              <i class="fa fa-floppy-o"></i>
+                            </button>
+                          </form>
+                        </li>
+                        <li>
+                          <button class="btn-link relative" data-toggle-display=".item-qty-3" title="Cancel Edit">
+                            <i class="fa fa-times"></i>
+                          </button>
+                        </li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="text-lg">5</td>
+                    <td>10304</td>
+                    <td>Plaid Western Shirt-Small-Black</td>
+                    <td class="col-fixed-width"><span class="item-qty-4">2</span><span class="item-qty-4" style="display:none;"><input name="quantity" value="2" size="4"/></span></td>
+                    <td class="col-fixed-width"><span class="item-qty-4">$26.24</span><span class="item-qty-4" style="display:none;"><input name="price" value="26.24" size="4"/></span></td>
+                    <td>$52.49</td>
+                    <td>
+                      <ul class="list-unstyled list-inline item-qty-4">
+                        <li>
+                          <button type="submit" class="btn-link relative" title="Edit" data-toggle-display=".item-qty-4">
+                            <i class="fa fa-pencil-square-o"></i>
+                          </button>
+                        </li>
+                        <li>
+                          <button type="submit" class="btn-link delete-item" title="Delete"><i class="fa fa-trash-o"></i></button>
+                        </li>
+                      </ul>
+                      <ul class="list-unstyled list-inline item-qty-4" style="display:none;">
+                        <li>
+                          <form method="post" action="#">
+                            <button type="submit" class="btn-link relative" title="Save">
+                              <i class="fa fa-floppy-o"></i>
+                            </button>
+                          </form>
+                        </li>
+                        <li>
+                          <button class="btn-link relative" data-toggle-display=".item-qty-4" title="Cancel Edit">
+                            <i class="fa fa-times"></i>
+                          </button>
+                        </li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="text-lg">6</td>
+                    <td>10304</td>
+                    <td>Plaid Western Shirt-Small-Black</td>
+                    <td class="col-fixed-width"><span class="item-qty-5">2</span><span class="item-qty-5" style="display:none;"><input name="quantity" value="2" size="4"/></span></td>
+                    <td class="col-fixed-width"><span class="item-qty-5">$26.24</span><span class="item-qty-5" style="display:none;"><input name="price" value="26.24" size="4"/></span></td>
+                    <td>$52.49</td>
+                    <td>
+                      <ul class="list-unstyled list-inline item-qty-5">
+                        <li>
+                          <button type="submit" class="btn-link relative" title="Edit" data-toggle-display=".item-qty-5">
+                            <i class="fa fa-pencil-square-o"></i>
+                          </button>
+                        </li>
+                        <li>
+                          <button type="submit" class="btn-link delete-item" title="Delete"><i class="fa fa-trash-o"></i></button>
+                        </li>
+                      </ul>
+                      <ul class="list-unstyled list-inline item-qty-5" style="display:none;">
+                        <li>
+                          <form method="post" action="#">
+                            <button type="submit" class="btn-link relative" title="Save">
+                              <i class="fa fa-floppy-o"></i>
+                            </button>
+                          </form>
+                        </li>
+                        <li>
+                          <button class="btn-link relative" data-toggle-display=".item-qty-5" title="Cancel Edit">
+                            <i class="fa fa-times"></i>
+                          </button>
+                        </li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="text-lg">7</td>
+                    <td>1234</td>
+                    <td>
+                      Small Cap
+                    </td>
+                    <td class="col-fixed-width"><span class="item-qty-6">2</span><span class="item-qty-6" style="display:none;"><input name="quantity" value="2" size="4"/></span></td>
+                    <td class="col-fixed-width"><span class="item-qty-6">$26.24</span><span class="item-qty-6" style="display:none;"><input name="price" value="26.24" size="4"/></span></td>
+                    <td>$52.49</td>
+                    <td>
+                      <ul class="list-unstyled list-inline item-qty-6">
+                        <li>
+                          <button type="submit" class="btn-link relative" title="Edit" data-toggle-display=".item-qty-6">
+                            <i class="fa fa-pencil-square-o"></i>
+                          </button>
+                        </li>
+                        <li>
+                          <button type="submit" class="btn-link delete-item" title="Delete"><i class="fa fa-trash-o"></i></button>
+                        </li>
+                      </ul>
+                      <ul class="list-unstyled list-inline item-qty-6" style="display:none;">
+                        <li>
+                          <form method="post" action="#">
+                            <button type="submit" class="btn-link relative" title="Save">
+                              <i class="fa fa-floppy-o"></i>
+                            </button>
+                          </form>
+                        </li>
+                        <li>
+                          <button class="btn-link relative" data-toggle-display=".item-qty-6" title="Cancel Edit">
+                            <i class="fa fa-times"></i>
+                          </button>
+                        </li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="text-lg">8</td>
+                    <td>2134</td>
+                    <td>Plaid Western Shirt-Small-Blue</td>
+                    <td class="col-fixed-width"><span class="item-qty-7">2</span><span class="item-qty-7" style="display:none;"><input name="quantity" value="2" size="4"/></span></td>
+                    <td class="col-fixed-width"><span class="item-qty-7">$26.24</span><span class="item-qty-7" style="display:none;"><input name="price" value="26.24" size="4"/></span></td>
+                    <td>$52.49</td>
+                    <td>
+                      <ul class="list-unstyled list-inline item-qty-7">
+                        <li>
+                          <button type="submit" class="btn-link relative" title="Edit" data-toggle-display=".item-qty-7">
+                            <i class="fa fa-pencil-square-o"></i>
+                          </button>
+                        </li>
+                        <li>
+                          <button type="submit" class="btn-link delete-item" title="Delete"><i class="fa fa-trash-o"></i></button>
+                        </li>
+                      </ul>
+                      <ul class="list-unstyled list-inline item-qty-7" style="display:none;">
+                        <li>
+                          <form method="post" action="#">
+                            <button type="submit" class="btn-link relative" title="Save">
+                              <i class="fa fa-floppy-o"></i>
+                            </button>
+                          </form>
+                        </li>
+                        <li>
+                          <button class="btn-link relative" data-toggle-display=".item-qty-7" title="Cancel Edit">
+                            <i class="fa fa-times"></i>
+                          </button>
+                        </li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="text-lg">9</td>
+                    <td>2134</td>
+                    <td>Plaid Western Shirt-Small-Blue</td>
+                    <td class="col-fixed-width"><span class="item-qty-7">2</span><span class="item-qty-7" style="display:none;"><input name="quantity" value="2" size="4"/></span></td>
+                    <td class="col-fixed-width"><span class="item-qty-7">$26.24</span><span class="item-qty-7" style="display:none;"><input name="price" value="26.24" size="4"/></span></td>
+                    <td>$52.49</td>
+                    <td>
+                      <ul class="list-unstyled list-inline item-qty-7">
+                        <li>
+                          <button type="submit" class="btn-link relative" title="Edit" data-toggle-display=".item-qty-7">
+                            <i class="fa fa-pencil-square-o"></i>
+                          </button>
+                        </li>
+                        <li>
+                          <button type="submit" class="btn-link delete-item" title="Delete"><i class="fa fa-trash-o"></i></button>
+                        </li>
+                      </ul>
+                      <ul class="list-unstyled list-inline item-qty-7" style="display:none;">
+                        <li>
+                          <form method="post" action="#">
+                            <button type="submit" class="btn-link relative" title="Save">
+                              <i class="fa fa-floppy-o"></i>
+                            </button>
+                          </form>
+                        </li>
+                        <li>
+                          <button class="btn-link relative" data-toggle-display=".item-qty-7" title="Cancel Edit">
+                            <i class="fa fa-times"></i>
+                          </button>
+                        </li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="text-lg">10</td>
+                    <td>2134</td>
+                    <td>Plaid Western Shirt-Small-Blue</td>
+                    <td class="col-fixed-width"><span class="item-qty-7">2</span><span class="item-qty-7" style="display:none;"><input name="quantity" value="2" size="4"/></span></td>
+                    <td class="col-fixed-width"><span class="item-qty-7">$26.24</span><span class="item-qty-7" style="display:none;"><input name="price" value="26.24" size="4"/></span></td>
+                    <td>$52.49</td>
+                    <td>
+                      <ul class="list-unstyled list-inline item-qty-7">
+                        <li>
+                          <button type="submit" class="btn-link relative" title="Edit" data-toggle-display=".item-qty-7">
+                            <i class="fa fa-pencil-square-o"></i>
+                          </button>
+                        </li>
+                        <li>
+                          <button type="submit" class="btn-link delete-item" title="Delete"><i class="fa fa-trash-o"></i></button>
+                        </li>
+                      </ul>
+                      <ul class="list-unstyled list-inline item-qty-7" style="display:none;">
+                        <li>
+                          <form method="post" action="#">
+                            <button type="submit" class="btn-link relative" title="Save">
+                              <i class="fa fa-floppy-o"></i>
+                            </button>
+                          </form>
+                        </li>
+                        <li>
+                          <button class="btn-link relative" data-toggle-display=".item-qty-7" title="Cancel Edit">
+                            <i class="fa fa-times"></i>
+                          </button>
+                        </li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="text-lg">11</td>
+                    <td>2134</td>
+                    <td>Plaid Western Shirt-Small-Blue</td>
+                    <td class="col-fixed-width"><span class="item-qty-7">2</span><span class="item-qty-7" style="display:none;"><input name="quantity" value="2" size="4"/></span></td>
+                    <td class="col-fixed-width"><span class="item-qty-7">$26.24</span><span class="item-qty-7" style="display:none;"><input name="price" value="26.24" size="4"/></span></td>
+                    <td>$52.49</td>
+                    <td>
+                      <ul class="list-unstyled list-inline item-qty-7">
+                        <li>
+                          <button type="submit" class="btn-link relative" title="Edit" data-toggle-display=".item-qty-7">
+                            <i class="fa fa-pencil-square-o"></i>
+                          </button>
+                        </li>
+                        <li>
+                          <button type="submit" class="btn-link delete-item" title="Delete"><i class="fa fa-trash-o"></i></button>
+                        </li>
+                      </ul>
+                      <ul class="list-unstyled list-inline item-qty-7" style="display:none;">
+                        <li>
+                          <form method="post" action="#">
+                            <button type="submit" class="btn-link relative" title="Save">
+                              <i class="fa fa-floppy-o"></i>
+                            </button>
+                          </form>
+                        </li>
+                        <li>
+                          <button class="btn-link relative" data-toggle-display=".item-qty-7" title="Cancel Edit">
+                            <i class="fa fa-times"></i>
+                          </button>
+                        </li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="text-lg">12</td>
+                    <td>2134</td>
+                    <td>Plaid Western Shirt-Small-Blue</td>
+                    <td class="col-fixed-width"><span class="item-qty-7">2</span><span class="item-qty-7" style="display:none;"><input name="quantity" value="2" size="4"/></span></td>
+                    <td class="col-fixed-width"><span class="item-qty-7">$26.24</span><span class="item-qty-7" style="display:none;"><input name="price" value="26.24" size="4"/></span></td>
+                    <td>$52.49</td>
+                    <td>
+                      <ul class="list-unstyled list-inline item-qty-7">
+                        <li>
+                          <button type="submit" class="btn-link relative" title="Edit" data-toggle-display=".item-qty-7">
+                            <i class="fa fa-pencil-square-o"></i>
+                          </button>
+                        </li>
+                        <li>
+                          <button type="submit" class="btn-link delete-item" title="Delete"><i class="fa fa-trash-o"></i></button>
+                        </li>
+                      </ul>
+                      <ul class="list-unstyled list-inline item-qty-7" style="display:none;">
+                        <li>
+                          <form method="post" action="#">
+                            <button type="submit" class="btn-link relative" title="Save">
+                              <i class="fa fa-floppy-o"></i>
+                            </button>
+                          </form>
+                        </li>
+                        <li>
+                          <button class="btn-link relative" data-toggle-display=".item-qty-7" title="Cancel Edit">
+                            <i class="fa fa-times"></i>
+                          </button>
+                        </li>
+                      </ul>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-lg-6 col-md-6 col-sm-6">
+            <div class="panel panel-default bg-danger">
+              <div class="panel-heading">
+                <span class="panel-title">Promotion Information</span>
+              </div>
+              <div class="panel-body bg-danger">
+                Promotion detail goes here.
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-6">
+            <div class="panel panel-default bg-danger">
+              <div class="panel-heading">
+                <span class="panel-title">Sales Information</span>
+              </div>
+              <div class="panel-body bg-danger">
+                Sales detail goes here.
+              </div>
+            </div>
+          </div>
+      </div>
+    
+    </div><!-- wrapper -->
+    
+    <!-- Core Scripts - Include with every page -->
+    <script type="text/javascript" src="js/jquery-1.10.2.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/table-fixed-header.js"></script>
+    <script type="text/javascript" src="js/jquery.fixedheadertable-3.0.4.js"></script>
+    <script type="text/javascript" src="js/bootstrap-datepicker.js"></script>
+    <script type="text/javascript" src="js/bootstrap-modal.js"></script>
+    <script type="text/javascript" src="js/bootstrap-modalmanager.js"></script>
+    <script type="text/javascript" src="js/custom_js.js"></script>
+  
+  </div>
+  </body>
+</html>

@@ -1,0 +1,1160 @@
+@media (max-width: 1200px) {.container {width:initial !important;}}
+
+body {font-family:'Open Sans',Calibri,Candara,Arial,sans-serif;}
+input,button,select,textarea {font-family:'Open Sans',Calibri,Candara,Arial,sans-serif;}
+
+
+.well {background-color:#fcfcfc; border-color:#f3f3f3; box-shadow:none;}
+.thumbnail {word-wrap:break-word;}
+
+.overlay-parent {position: relative;}
+
+ul.info-tiles {margin-left:0; list-style:none;}
+ul.info-tiles>li {/*display:inline-block;*/ float:left;/* margin-bottom:20px;*/ vertical-align:top; word-break: break-word;}
+ul.info-tiles h3 {font-size:15px; margin:0;}
+ul.info-tiles dl {margin:0;}
+ul.info-tiles textarea {width:100%; padding: 0;}
+
+@media (min-width:992px) and (max-width:1199px) {
+    ul.info-tiles>li {border-left:#ccc 1px solid; padding-right:12px; padding-left:12px; width:25%;}
+    ul.info-tiles>li:nth-child(4n+1) {border-left:0; padding-right:0; padding-left:0;}
+    ul.info-tiles .dl-horizontal dt {clear: none; float: none; text-align: left; width: auto;}
+    ul.info-tiles .dl-horizontal dd {margin-left: 0;}
+    ul.info-tiles>li:last-child:nth-child(3){width: 50%;}
+    
+}
+@media (min-width:768px) and (max-width:991px) {
+    ul.info-tiles>li {border-left:#ccc 1px solid; padding-left:10px; padding-left:10px; width:50%;}
+    ul.info-tiles>li:nth-child(2n+1) {border-left:0; padding-left:0; padding-left:0;}
+    ul.info-tiles>li:nth-child(2n+1),ul.info-tiles>li:nth-child(2n+2) {margin-top:20px;}
+    ul.info-tiles>li:last-child:nth-child(3){width: 100%;min-height: 0 !important;}
+    
+}
+@media (max-width:767px) {
+    ul.info-tiles>li {border-left:#ccc 1px solid; margin-left:1%; padding-left:1%; width:48%;}
+    ul.info-tiles>li:nth-child(2n+1) {border-left:0; margin-left:0; padding-left:0;}
+    ul.info-tiles>li:last-child:nth-child(3){width: 695px;}
+    
+}
+@media (min-width:1200px) {
+    ul.info-tiles>li {border-left:#ccc 1px solid; padding-left:15px; padding-right: 15px; width:25%;}
+    ul.info-tiles>li:nth-child(4n+1) {border-left:0; padding-left:0; padding-left:0; width: 25%;}
+    ul.info-tiles>li:last-child {padding-right: 0; width: 25%;}
+    ul.info-tiles>li:last-child:nth-child(3){width: 50%;}
+}
+
+.divider:before {content:'|'; color:#ccc; display:inline-block; text-align:center; width:9px;}
+
+.clear {clear:both;}
+
+#page-title {margin-bottom: 15px; margin-top: 5px; font-size: 16px;}
+#page-title a:hover{text-decoration: none;}
+.breadcrumb {padding-right: 5px;}
+.breadcrumb.list-inline {margin: 0;}
+.breadcrumb.list-inline>li {padding: 0;}
+.breadcrumb>li.no-separator:before{content: ' '; padding: 0;}
+.breadcrumb .btn-link {padding: 0; margin: 0; border: 0;}
+.breadcrumb .btn-link:focus, .breadcrumb .btn-link:hover {text-decoration: none;}
+.dropdown-menu.left {left: inherit; right: 0;}
+.nav-tabs>li>a>h3 {margin:5px 0 5px 0; padding-right:15px;}
+.nav-tabs>li>.close {margin-right:5px;position:relative;z-index:1;}
+
+label.error{color:#FF0000;}
+
+.dialog-ajax-loader {margin-left: 47.8%;}
+.ajax-loader{background: url(/images/ajax-loader.gif) no-repeat center; display: inline-block; height:16px; width: 16px;}
+
+.view-calendar button {background: url(images/cal.gif) no-repeat !important;display: inline-block;border: none;vertical-align:center;margin-top:3px;height:20px;width:20px;}
+
+.navbar .margin-help { margin-top: 15px;}
+.ui-dialog .ui-dialog-content { max-height: 500px;}
+
+#menu-search{position:absolute; top:10px; z-index:1;}
+.metro .tile{margin-left: 10px;margin-bottom: 10px;margin-right: 0px;margin-top: 0px;padding: 0 10px;/*padding-bottom: 1px;*/width: 147px;word-break: break-word;border-radius: 10px;}
+.metro .tile:hover{color: #333; outline: inherit;}
+.metro .tile .text4 {font-size: 20px;line-height: 1.5;text-align: center;margin-top: 40px;max-height: inherit;}
+
+.menu-nav{padding-left:0px;}
+.menu-nav.affix, .nav-pills.affix{position: fixed;margin-top: 20px;top: 0px;width: 165px;}
+
+.menu-items .csr,.menu-items .cs-vw {background-color: #603cba;}
+.menu-items .buynowcms, .menu-items .buynowcms-vw {background-color: #ee992a;}
+.menu-items .dealer, .menu-items .dealer-vw {background-color: #0072BC;}
+.menu-items .dataimport, .menu-items .dataimport-vw {background-color: #008641;}
+.menu-items .admin, .menu-items .admin-vw {background-color: #5F9EA0;}
+.menu-items .procurement, .menu-items .procurement-vw {background-color: #662D91;}
+.menu-items .warehouse, .menu-items .warehouse-vw {background-color: #CD4900;}
+.menu-items .merchandising, .menu-items .merchandising-vw {background-color: #999;}
+.menu-items .pim, .menu-items .pim-vw {background-color: #c0392b;}
+.menu-items .arAp, .menu-items .arAp-vw {background-color: #bc1c48;}
+.menu-items .financialReports, .menu-items .financialReports-vw {background-color: #FF6347;}
+.menu-items .reports, .menu-items .reports-vw {background-color: #01a31c}
+.menu-items .manufacturing, .menu-items .manufacturing-vw {background-color: #085ebb;}
+
+.section .menu-nav .favorites {padding-bottom: 0;background-color: gold;}
+.section .menu-nav .csr, .section .menu-nav .cs-vw {background-color: #603cba;}
+.section .menu-nav .buynowcms, .section .menu-nav .buynowcms-vw {background-color: #ee992a;}
+.section .menu-nav .dealer, .section .menu-nav .dealer-vw {background-color: #0072BC;}
+.section .menu-nav .dataimport, .section .menu-nav .dataimport-vw {background-color: #008641;}
+.section .menu-nav .admin, .section .menu-nav .admin-vw {background-color: #5F9EA0;}
+.section .menu-nav .procurement, .section .menu-nav .procurement-vw {background-color: #662D91;}
+.section .menu-nav .warehouse, .section .menu-nav .warehouse-vw {background-color: #CD4900;}
+.section .menu-nav .merchandising, .section .menu-nav .merchandising-vw {background-color: #999;}
+.section .menu-nav .pim, .section .menu-nav .pim-vw {background-color: #c0392b;}
+.section .menu-nav .arAp, .section .menu-nav .arAp-vw {background-color: #bc1c48;}
+.section .menu-nav .financialReports, .section .menu-nav .financialReports-vw {background-color: #FF6347;}
+.section .menu-nav .reports, .section .menu-nav .reports-vw {background-color: #01a31c}
+.section .menu-nav .manufacturing, .section .menu-nav .manufacturing-vw {background-color: #085ebb;}
+
+.break {
+    word-break: break-all;
+}
+
+.section {position: relative;/*width: 810px !important;*/width: auto;height: auto;}
+.section .menu-nav li{background-color: #2C83EF;}
+.section .menu-nav li {width: 100%;list-style-type: none;text-align: center;border-radius: 4px;padding-top: 5px;padding-bottom: 5px;color: white;margin-bottom: 20px;}
+.section .menu-nav li a {color: white;text-decoration: none;font-weight: bold;}
+
+.table-collapse {border: 1px solid #dddddd; border-collapse: separate; *border-collapse: collapse; border-radius: 4px;width:100%;}
+.table-collapse thead tr th {font-weight: bold; line-height:20px;}
+.table-collapse tr.parent {cursor: pointer; background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #f5f5f5), color-stop(1, #e3e3e3)); background-image: -moz-linear-gradient(bottom, #f5f5f5 0%, #e3e3e3 100%);}
+.table-collapse thead:first-child tr:first-child th:first-child {border-top-left-radius: 4px;}
+.table-collapse thead:first-child tr:first-child th:last-child {border-top-right-radius: 4px;}
+.table-collapse th, .table-collapse td {padding: 8px; text-align: left; vertical-align: top;}
+.table thead th {font-size: 13px;}
+
+.table-plain tbody tr {
+    border-style:hidden;
+}
+.table-plain tbody tr td {
+    padding-right:0;
+    padding-top:6px;
+    padding-bottom:0;
+}
+
+/* Styling fix for pagination bar inslide navbar */
+.navbar .pagination {margin: 6px 6px 2px 0;}
+
+/* Styling fix for bulk-aciton checkbox inside the table rows, to make it render below the one in the navbar */
+.table .bulk-action-checkbox {padding-left:15px; padding-right:0; width:38px;}
+
+/* Styling fix for data lists inside tables */
+td > dl:first-child {margin-top: 0;}
+
+/* Countered jQuery styling for select boxes and buttons present in the dialogs */
+.ui-dialog-content select, .ui-dialog-content button {font-size:14px;}
+
+/* Styling for scroll pagination */
+.loading {text-align: center; margin: 0px 35%; display: none;}
+.top-link, a.top-link:hover { position: fixed; right: 20px; bottom: 100px;}
+.top-link { color:white; border-radius: 5px 5px 5px 5px; background:gray; padding:5px 10px;}
+
+/* Styling for selected table rows */
+.table tr.active {background-color:#DFF;}
+.table-striped tbody > tr.active:nth-child(odd) > td,
+.table-striped tbody > tr.active:nth-child(odd) > th {background-color:#BFF;}
+.table-hover tbody tr.active:hover > td,
+.table-hover tbody tr.active :hover > th {background-color:#CFF;}
+.table > tbody > tr.active > td {background-color:#DFF;}
+
+/* Fix Stylings which are overriding by jquery.elrte-1.3.css*/
+.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-only {padding: 5px 14px 6px; font-size: 13px;}
+.ui-dialog .ui-dialog-titlebar {padding: 5px 15px;}
+.ui-dialog .ui-dialog-title {margin:0;}
+.ui-dialog .ui-dialog-title, .ui-dialog .ui-dialog-content {font-size: 13px;}
+.ui-dialog .ui-dialog-buttonpane button {margin: .5em .4em .5em 0;}
+.ui-widget {font-size: 13px;}
+
+/* Styling for sticky table header plugin */
+.table-sticky .header-fixed {
+    background: #f5f5f5;
+    border-bottom: 1px solid #ddd;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    position: fixed;
+    top:0;
+    z-index: 1020;
+}
+
+/* Styling for fixed table header plugin */
+.fht-table, .fht-table tbody {margin: 0;}
+.fht-table-wrapper .fht-tbody {overflow: auto;}
+.fht-table-wrapper .fht-table .fht-cell {overflow: hidden; height: 1px;}
+
+/* Added styling for required field asterisk */
+.asterisk { color: #FF0000;}
+
+/* Styling for unsaved class */
+.unsaved:before {content: "*";}
+
+/* Styling for dl width */
+@media (min-width:768px) {
+  .dl-horizontal dt {font-size: 13px;}
+  .dl-mini dt { width: 50px;}
+  .dl-mini dd { margin-left: 70px;}
+  .dl-small dt { width: 100px;}
+  .dl-small dd { margin-left: 120px;}
+  .dl-large dt { width: 200px;}
+  .dl-large dd { margin-left: 220px;}
+  .dl-xlarge dt { width: 250px;}
+  .dl-xlarge dd { margin-left: 270px;}
+  .dl-xxlarge dt { width: 300px;}
+  .dl-xxlarge dd { margin-left: 320px;}
+
+}
+@media (min-width:1199px) {
+  .dl-horizontal dt {font-size: 13px;}
+  .dl-mini dt { width: 50px;}
+  .dl-mini dd { margin-left: 70px;}
+  .dl-small dt { width: 100px;}
+  .dl-small dd { margin-left: 120px;}
+  .dl-large dt { width: 200px;}
+  .dl-large dd { margin-left: 220px;}
+  .dl-xlarge dt { width: 250px;}
+  .dl-xlarge dd { margin-left: 270px;}
+  .dl-xxlarge dt { width: 300px;}
+  .dl-xxlarge dd { margin-left: 320px;}
+}
+
+/* Styling to fix the tiny transparent text box, which appears next to the date fields, added margin instead */
+.view-calendar [type=text].hasDatepicker {display: none;}
+.view-calendar button {margin-left: 3px;}
+
+/* Styling to show icons of font-awesome-3.0.2.min.css in large size*/
+.fa.fa-8x {font-size: 8em;}
+.fa-8x.fa-border {
+    border-width: 8px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
+.fa-plus {
+    margin-top: 3px;
+    margin-bottom: 2px;
+}
+
+tr.order-item-backordered, td.order-item-backordered, div.order-item-backordered                            {background:#F5EBCC;}
+tr.order-item-cancelled, td.order-item-cancelled, div.order-item-cancelled                                {background:#EBCCCC;}
+tr.order-item-shipped, td.order-item-shipped, div.order-item-shipped                                    {background:#E1EFCC;}
+tr.order-item-picked, td.order-item-picked, div.order-item-picked                                      {background:#E3E9EC;}
+
+.well-small h3 {margin-top: 0; font-size: 20px; color: #666666;}
+
+@media (min-width:768px) and (max-width:991px) {
+    .popover {max-width: 500px;}
+    [data-tooltip-target].fa, [data-tooltip-content].fa, [data-tooltip-target].glyphicon, [data-tooltip-content].glyphicon, i[data-tooltip-target], i[data-tooltip-content] {font-size: 1.5em;padding-left: 5px;}
+}
+@media (min-width:992px) {
+    .popover {max-width: 768px;}
+}
+
+.popover .popover-content .static-popover-content {
+    max-width:250px;
+    word-break:break-word;
+}
+#map {
+    border: 1px solid #979797;
+    width: 600px;
+    height: 450px;
+    margin: 15px auto;
+}
+
+/*Styling for csv and pdf icons*/
+.pdf-icon{display:inline-block;width:20px;height:20px;vertical-align:text-top;background-image:url("../img/pdf.png");background-repeat:no-repeat;background-size:20px 20px;}
+.csv-icon{display:inline-block;width:20px;height:20px;vertical-align:text-top;background-image:url("../img/excel-logo.png");background-repeat:no-repeat;background-size:20px 20px;}
+.csv-icon.fa-2x{display:inline-block;width:32px;height:32px;vertical-align:text-top;background-image:url("../img/excel-logo.png");background-repeat:no-repeat;background-size:32px 32px;}
+.pdf-icon.fa-2x{display:inline-block;width:32px;height:32px;vertical-align:text-top;background-image:url("../img/pdf.png");background-repeat:no-repeat;background-size:32px 32px;}
+.google-drive-icon{display:inline-block;width:32px;height:32px;vertical-align:text-top;background-image:url("../img/google-drive-logo.png");background-repeat:no-repeat; background-size:32px 32px;}
+.dropbox-icon{display:inline-block;width:32px;height:32px;vertical-align:text-top;background-image:url("../img/dropbox-logo.jpeg");background-repeat:no-repeat;background-size:32px 32px;}
+
+/*progressbar */
+.progressbar {margin-top: 10px;counter-reset: step;height: 40px; display: inline-block;}
+.progressbar li {list-style-type: none;width: 208px;float: left;color: #999999; height: 13px; text-align: center;}
+.progressbar li a {text-decoration: none;display: block;color: inherit;}
+.progressbar li:before {content: counter(step);counter-increment: step; font-weight: bold; font-size:medium; text-align: center;width: 30px;line-height: 30px;display: block;color: white;background: #999999;border-radius: 50px; margin: -3px auto 3px auto;} 
+.progressbar li.active:before {background: #41b7d8;}
+.progressbar li.active {color: #41b7d8;}
+.progressbar li:last-child:after { content: none;}
+.progressbar li:after {content: ''; border-top: 1px dotted; width: 180px; height: 1px; position: relative; left: -506px; margin: -37px 0px 0px 624px; display: inline-block; float:left; color: #bbb;}
+.progressbarwrapper { text-align: center; margin-bottom: 9px;}
+
+/*For separating h5 element, class name need to be changed after discussion.*/
+h5.divider-x2 {
+  border-top: 1px solid lightgray;
+  text-align: center;
+  margin-top: 25px;
+}
+h5.divider-x2 span {
+  background: none repeat scroll 0 0 #FCFCFC;
+  padding: 0 10px;
+  position: relative;
+  top: -10px;
+}
+
+.thfloat-table {background:#f9f9f9; border:0px;}
+
+/*For inserting horizontal divider line for block level elements.*/
+.divider-x {
+  border-bottom: 1px solid lightgrey;
+}
+
+/*Styling for flot charts.*/
+.content {
+    width: 100%;
+    margin: 12px 0 0 2px;;
+    position: relative;
+}
+
+.graph-main-container {
+    border: 1px solid #ddd;
+    background-color: #FFFFFF;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+    -o-box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    -ms-box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    -moz-box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    -webkit-box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.thumbnails .graph-main-container {margin-bottom: 20px;}
+
+.graph-container {
+    width: 100%;
+    height: 450px;
+    padding: 17px 27px 22px;
+    margin: 2px 0 0 0;
+}
+
+.graph-container.graph-container-xs {
+    height:150px;
+}
+
+.graph-container.graph-container-sm {
+    height:300px;
+}
+
+.graph-container.graph-container-lg {
+    height:600px;
+}
+
+.graph-placeholder {
+    width: 100%;
+    height: 100%;
+    font-size: 14px;
+    line-height: 1.2em;
+}
+
+/* Styling to properly align dl as center */
+.dl-center dt{width:550px}
+.dl-center dd{margin-left:570px;}
+
+.form-group label {font-family:'Roboto',Calibri,Candara,Arial,sans-serif; margin-bottom:3px;}
+
+.iconlist {list-style:none; margin:0;}
+.iconlist li {display:inline;}
+.iconlist .btn-link, .iconlist a{border:0; padding-left: 5px;}
+
+.label { vertical-align:middle;}
+h3 .label, h4 .label {margin-bottom:6px;}
+
+.well > h4 {margin-top:5px; margin-bottom:15px;}
+
+.page-popover {
+  position: absolute;
+  top: 0;
+  left: 184px; /*This is a hack. Needs to be fixed later when required. */
+  display: block;
+  z-index: 0;
+}
+.page-popover.popover .arrow {
+  top: 29px; /*This is a hack. Needs to be fixed later when required. */
+}
+.page-popover.popover .popover-inner {
+  min-height: 58px; /*According to top offset of popover arrow. */
+}
+.popover .list-group{
+  margin-bottom: 0;
+}
+.popover .list-group-item{
+  border-width: 1px 0;
+}
+.popover .list-group-item:first-child{
+border-top-left-radius: 0;
+border-top-right-radius: 0;
+}
+.popover .list-group-item{
+ border-bottom: 0;
+}
+.position-rel {
+  position: relative;
+}
+
+/* Styling for legend used in pie chart */
+.legend-holder{
+    width: 100%;
+    padding: 17px 27px 22px;
+}
+
+.legend-holder > table {
+    width: 100%;
+}
+
+.legendColorBox > div {
+    width: 14px;
+}
+/* Styling for making any element relatively fixed (sticky) */
+.affix-main {position: relative;}
+.affix-wrapper {position: absolute;}
+.affix-main .affix-wrapper .affix {position: fixed;top: 40px;}
+.navbar.affix {position: fixed; width: 1170px; top: 0; z-index: 1;}
+
+.relative {position:relative;}
+.abs {position:absolute;}
+.abs-top {top:0;}
+.abs-left {left:0;}
+.abs-bottom {bottom:0;}
+.abs-right {right:0;}
+
+.fa-bg, .fa-bg:hover {background: rgba(249, 249, 249, 0.75); border-radius:3px;}
+.fa-bg.abs-top.abs-left {border-radius:0 0 3px 0;}
+.fa-bg.abs-top.abs-right {border-radius:0 0 0 3px;}
+.fa-bg.abs-bottom.abs-left {border-radius:0 3px 0 0;}
+.fa-bg.abs-bottom.abs-right {border-radius:3px 0 0 0;}
+
+.select-variant {
+    position: relative;
+    left: 160px;
+}
+.preview-variant {
+    padding-left: 0px;
+}
+.variant-section {
+    height: 300px;
+    overflow-y: auto;
+}
+.product-features {
+    max-height: 150px;
+    overflow-y: auto;
+}
+.carousel-item {
+    height: 150px;
+}
+tr.collapse.in {display: table-row;}
+.selectable .ui-selecting { background: #93EC9A; }
+.selectable .ui-selected { background: #83DD8B; color: white; }
+.selectable .selectable-item.ui-selectee:hover {background: #E4E9E8;}
+.selectable .selectable-item.ui-selecting:hover {background: #93EC9A;}
+.selectable .selectable-item.ui-selected:hover {background: #78CA7F;}
+.selectable .created {background: #16C01C;}
+.link{color:blue !important;}
+
+.divider-vertical{border-right: 1px solid #CCCCCC;}
+
+label img {max-width:100%;}
+
+/*Fix to add margin below navbar*/
+.navbar {margin-bottom: 20px;}
+
+/*Styling for date picker for bootstrap 3.0 to display it above navbar */
+.ui-datepicker {
+  z-index: 1001 !important;
+}
+
+/*Added styling for divider vertical as it is removed from bootstrap 3.0*/
+.navbar .divider-vertical {
+    border-left: 1px solid #F2F2F2;
+    border-right: 1px solid #FFFFFF;
+    height: 50px;
+    margin: 0 9px;
+}
+/*Styling for displaying bottom and right border in table column when col-* classes are being used*/
+table td[class*="col-"], table th[class*="col-"] {
+    position: inherit;
+}
+/*Styling for displaying chosen box similar to form-control box and to adjust its height and hover properties*/
+.chzn-choices {
+    border: 1px solid #CCCCCC !important;
+    border-radius: 4px 4px 4px 4px;
+}
+
+.chzn-choices .search-choice {
+    margin-top: 5px !important;
+}
+
+.chzn-container-active .chzn-choices {
+  border-color: #66AFE9 !important;
+  box-shadow: 0 0 8px rgba(102, 175, 233, 0.6) !important;
+  outline: 0 none !important;
+}
+.chzn-container input {
+  height: 30px !important;
+}
+.chzn-container-multi .chzn-choices .search-field input {
+    font-family : 'Open Sans',Calibri,Candara,Arial,sans-serif !important;
+}
+
+/*Styling for displaying nav-tabs and nav-pills properly*/
+.nav-tabs, nav-pills {
+  margin-bottom: 20px;
+}
+
+/*Styling for customizing position of title and sub-title*/
+.nav-tabs a h3 {
+    height: 32px;
+    margin-top: 0px;
+}
+.nav-tabs a h3 small{
+    font-size: 10px;
+}
+.nav-tabs a img {
+    margin: 2px 0px 4px 0px;
+}
+/*To display label normal*/
+label {
+    font-weight: normal;
+    font-size: 14px;
+}
+/*to display close icon over tab heading*/
+.nav .nav-tabs>li>a {position: relative;}
+
+/*To display overlay over navbar*/
+.ui-widget-overlay {
+    z-index: 1001;
+}
+
+/*Style to add bottom margin*/
+.form-margin {
+    margin-bottom: 5px;
+}
+
+/*Style for proper alignment in Date Picker*/
+.view-calendar input.form-control {
+    width: 80%;
+    display: inline-block;
+}
+
+/*Style to add bottom margin for thumbnails*/
+.invoice-tiles .thumbnail {
+    margin-bottom: 0px!important;
+}
+/* This style is for fixing the issue in which select all checkbox functionality is not working (in navigation bar) in popup*/
+.navbar {
+  position: static;
+}
+/*We need to review and improve following CSS code.*/
+.switch-button.has-switch {
+  vertical-align: -8px;
+  z-index: 0;
+  margin-right: 5px;
+  margin-top: 2px;
+  margin-left: 10px;
+}
+.switch-button .fa-check {
+  display: none;
+}
+.switch-button .dynamic-ajax-loader{
+  position: absolute;
+  bottom: 0;
+  z-index: 100;
+}
+.switch-on .dynamic-ajax-loader {
+  left: 46%;
+  top: 18%;
+}
+.switch-off .dynamic-ajax-loader {
+  left: 46%;
+  top: 18%;
+}
+.switch-left,.switch-right {
+  padding-left: 3px;
+  padding-right: 3px;
+}
+.red-bold {
+    color: #E03034;
+    font-weight: bold;
+}
+.green-bold {
+    color: #54A755;
+    font-weight: bold;
+}
+
+.btn.btn-default.btn-round {
+    border-radius: 20px;
+    font-size: 20px;
+    font-weight: 900;
+    padding: 0 10px;
+    margin-top: 8px;
+}
+
+.microbox {
+    border: 1px solid white;
+    width: 30px;
+    height: 20px;
+    outline: solid 1px #ccc;
+    margin-right: 10px;
+    display: inline-block;
+}
+
+
+.microbox-list li {
+    margin-top: 10px;
+    vertical-align: top;
+}
+.microbox-list li:first-child {
+    margin-top: 0px;
+}
+
+/* This style is enabling the popover on disabled buttons */
+.btn.disabled[data-tooltip-target] {
+  pointer-events: auto;
+}
+
+/* This style is for allowing the autocompleter results above the Bootstrap3.0 modal */
+.ui-autocomplete {
+  z-index: 1060 !important;
+  word-wrap: break-word;
+}
+.bs-callout {
+    margin-bottom: 20px;
+    padding: 20px;
+    border-left: 3px solid #eee;
+}
+.bs-callout-danger {
+    background-color: #fdf7f7;
+    border-color: #eed3d7;
+}
+.bs-callout-danger h4 {
+    color: #B94A48;
+}
+
+
+.ui-menu-item {
+word-break: break-word;
+}
+
+button .ajax-loader, a .ajax-loader{background-color: rgba(255, 255, 255, 0.75); border-radius: 3px; height: 100%; width: 100%; bottom: 0; left: 0; right: 0; top: 0;}
+
+/* CSS for ui-selectable */
+.ui-selectable .thumbnail {
+    padding: 5px 20px 5px 20px;
+ }
+ 
+.ui-selectable .thumbnail:hover {
+    border-color: #0088CC;
+    box-shadow: 3px 3px 10px #888888;
+ }
+ 
+.ui-selectable .ui-selected .thumbnail {
+    border-color: #0088CC;
+    line-height: 20px;
+    box-shadow: 3px 3px 10px #888888;
+ }
+select.chzn-done:disabled + .chzn-container-multi .chzn-choices {
+    background-color : #EEEEEE;
+    background-image : none;
+}
+select.chzn-done:disabled + .chzn-disabled {
+    opacity : 1 !important;
+}
+
+
+/* CSS related to the width and position of data dialogs*/
+@media screen and (min-width: 768px) and (max-width: 991px) { 
+    .modal.half {
+        width:60% !important;
+        margin-left: 20% !important;/* This is hackish idea to implement the margin and will be replaced as soon as we'll get new logic for this. */
+    }
+    .modal.default {
+        width: 80%;
+        margin-left: -40%;/* This is hackish idea to implement the margin and will be replaced as soon as we'll get new logic for this. */
+    }
+}
+
+@media screen and (min-width: 992px) { 
+    .modal.half {
+        width:40%;
+        margin-left: -20%;/* This is hackish idea to implement the margin and will be replaced as soon as we'll get new logic for this. */
+    }
+    .modal.default {
+        width: 80%;
+        margin-left: -40%;/* This is hackish idea to implement the margin and will be replaced as soon as we'll get new logic for this. */
+    }
+}
+
+/* custom inclusion of left tabs */
+.tabs-left > .nav-tabs {
+  border-bottom: 0;
+}
+
+.tab-content > .tab-pane,
+.pill-content > .pill-pane {
+  display: none;
+}
+
+.tab-content > .active,
+.pill-content > .active {
+  display: block;
+}
+
+.tabs-left > .nav-tabs > li {
+  float: none;
+}
+
+.tabs-left > .nav-tabs > li > a {
+  min-width: 74px;
+  margin-right: 0;
+  margin-bottom: 3px;
+}
+
+.tabs-left > .nav-tabs {
+  float: left;
+  margin-right: 19px;
+  border-right: 1px solid #ddd;
+}
+
+.tabs-left > .nav-tabs > li > a {
+  margin-right: -1px;
+  -webkit-border-radius: 4px 0 0 4px;
+     -moz-border-radius: 4px 0 0 4px;
+          border-radius: 4px 0 0 4px;
+}
+
+.tabs-left > .nav-tabs > li > a:hover,
+.tabs-left > .nav-tabs > li > a:focus {
+  border-color: #eeeeee #dddddd #eeeeee #eeeeee;
+}
+
+.tabs-left > .nav-tabs .active > a,
+.tabs-left > .nav-tabs .active > a:hover,
+.tabs-left > .nav-tabs .active > a:focus {
+  border-color: #ddd transparent #ddd #ddd;
+  *border-right-color: #ffffff;
+}
+/*End of left tabs style*/
+
+.logo-container{padding-left: 0;}
+#logo-img{max-height: 30px;width: 100px;}
+.logo-container a{text-decoration: none;}
+.logo-float i{vertical-align: middle;}
+.logo-float{padding: 25px 0 0 0;}
+
+/* CSS related to the font size of the text*/
+.text-lg {
+    font-size: 20px;
+}
+.text-md {
+    font-size: 14px;
+}
+.text-sm {
+    font-size: 12px;
+}
+
+/*Style for tab action icon for left tabs*/
+.nav-tabs li .tab-action {
+  z-index: 1;
+  position: relative;
+}
+button.tab-action {
+  padding: 2px;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+}
+.tab-action {
+  float:right;
+  margin-top: 12px;
+  line-height: 1;
+  color: #000;
+  text-shadow: 0 1px 0 #fff;
+  opacity: 0.5;
+}
+ul.ul-style {
+  list-style: disc outside none;
+  padding-left: 18px;
+}
+
+/*Style to display pointer for clickable row*/
+td.bulk-action-checkbox, td.bulk-action-checkbox ~ td {
+    cursor: pointer;
+}
+
+/* Style for images to be uploaded in dialog.*/
+.modal span#uploadedImage { padding-left: 65px;}
+.modal span#uploadedImage img { width: 65px;}
+
+.tab-overflow {
+    max-width: 300px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+/* Styling for favourites tag. This is temporary, need to rethink on this.*/
+
+label.favorites-label{
+    font-weight: bold;
+    cursor: pointer;
+    display: inline-table;
+}
+label.favorites-label input{
+    margin-right: 5px;
+}
+
+/*Style to display ajax loader for drop-down correctly*/
+select.js-action-dropdown ~ i.ajax-loader.abs {left: 45%; top: 17px;}
+
+.favicon-icon {width: 16px;}
+
+/*Style related to Split button drop-down.*/
+.dropdown-menu > li > button:hover,
+.dropdown-menu > li > button:focus {
+    background-color: #f5f5f5;
+    color: #000;
+}
+.dropdown-menu > li > button.btn-link{
+    color: #000;
+    text-decoration: none;
+}
+
+/*Style for cart summary on small devices*/
+.cart-summary-static {position: relative; top: -10px;}
+
+/*Base Style for Sticky*/
+.initialized.sticky-container{position:relative}
+.initialized .sticky-parent{bottom:0;position:absolute;top:0}
+.initialized .sticky{position:fixed;}
+.initialized .sticky.bottom{position:absolute;bottom:0}
+.sticky-clone{display:none}
+.initialized .sticky-clone{display:block}
+
+/*Style for Create order sticky*/
+.initialized .sticky-parent .main-section {z-index: 1; background-color: white;}
+.initialized .sticky-clone{z-index:-1;}
+
+/* Entypo add-to-list icon styling */
+@font-face {
+    font-family: 'entypo';
+    src:url('../fonts/entypo.eot?-r7u6p7');
+    src:url('../fonts/entypo.eot?#iefix-r7u6p7') format('embedded-opentype'),
+        url('../fonts/entypo.woff?-r7u6p7') format('woff'),
+        url('../fonts/entypo.ttf?-r7u6p7') format('truetype'),
+        url('../fonts/entypo.svg?-r7u6p7#entypo') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="entypo-"], [class*=" entypo-"] {
+    font-family: 'entypo';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.entypo-add-to-list:before {
+    content: "\e600";
+}
+
+.order-status-dropdown {width: 500px; padding-left: 5px; padding-right: 5px; padding-top: 10px;}
+.payment-status-dropdown {padding-left: 6px; padding-top: 10px;}
+.order-view-title {display:inline-block;}
+.status-button button {font-weight: bold; word-spacing: 3px; margin-bottom: 4px;}
+
+.progress{margin: 0;}
+.progress.status {height:5px;}
+.badge-position {
+    position: relative;
+    top: -15px;
+}
+.status-popover li a {
+    display: block;
+    text-decoration: none;
+}
+.status-popover{
+    counter-reset:step;
+}
+.status-popover a {
+    white-space: nowrap;
+}
+.status-popover.incomplete li a:before {
+    content: counter(step, decimal);
+    counter-increment: step;
+    display: inline-block;
+    background: none repeat scroll 0 0 #6FDFDF;
+    border-radius: 50px 50px 50px 50px;
+    width: 20px;
+    color: white;
+    margin: 0px 2px 5px 0px;
+    text-align: center;
+}
+.status-popover.completed li a:before {
+    content: "\f00c";
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+    display: inline-block;
+    background: none repeat scroll 0 0 #6FDFDF;
+    border-radius: 50px 50px 50px 50px;
+    width: 20px;
+    color: white;
+    margin: 0px 2px 5px 0px;
+    text-align: center;
+}
+.custom-pointer {
+    cursor:pointer;
+}
+
+div.bs-callout-info {
+    background-color: #F4F8FA;
+    border-color: #5BC0DE;
+}
+
+.bs-callout {
+    border-left: 3px solid #EEEEEE;
+    padding: 20px;
+}
+
+.bs-callout-info h4 {
+    color: #5BC0DE;
+}
+.bs-callout h4 {
+    margin-bottom: 5px;
+    margin-top: 0;
+}
+
+.pushdown{float:left}
+.pushdown-hidden{display:none}
+.pushdown-body{padding:0;margin:0;clear:both;display:block;overflow:hidden;width:100%; }
+
+.facets-nav-header {
+  background-color: #F5F5F5;
+  padding: 1px 4px;
+}
+/* Style for lazy-load */
+.lazy-loading {
+    background: url('../img/lazyLoading.gif') no-repeat center center;
+    height:40px;
+}
+
+/* style for recently updated row. */
+.recently-updated {
+    border-left: 3px solid #428bca!important;
+}
+
+.margin-top-zero {
+    margin-top: 0px
+}
+.metro .tile.tile-unstyled {cursor: auto; width:148px;}
+.metro .tile.tile-unstyled:hover {color: #fff;}
+.chosen-dropdown-icon {right: 25px; top: 50%; margin-top: -10px;}
+ 
+/* Style for Blog content*/
+.blog-main {
+    font-size: 15px;
+    line-height: 1.5;
+}
+.blog-post-title {
+    margin-bottom: 5px;
+    border-bottom: 1px solid #999;
+}
+.blog-post-meta {
+    margin-bottom: 20px;
+    color: #999;
+}
+
+/*Style for White space optimization and panels*/
+.square {border-radius: 0px !important;}
+.block{display:block;}
+.button-bar{position:relative;right:0;top:4px;float:right;margin-right:45px;}
+.button-bar > form{display:inline-block;}
+[data-toggle-display]{cursor:pointer;}
+.border-top{border-top:1px solid #DDDDDD !important}
+.panel{margin-bottom:10px;}
+.panel-heading{padding:0;}
+.panel-title{margin:5px;display:inline-block;}
+.panel-status{display:inline-block;}
+.panel-buttons, .panel-pagination{float:right;}
+.panel-buttons ul, .panel-pagination ul{list-style:none;margin:0;padding:0;}
+.panel-buttons ul li, .panel-pagination ul li{display:inline-block;float:left;}
+.panel-buttons ul li .btn, .panel-pagination ul li .btn-link{padding:6px 12px 6px;}
+.panel-buttons ul li .btn, .panel-pagination ul li .btn-link{border:none;border-left:1px solid #DDDDDD;border-radius:0;}
+.panel-buttons ul li .btn.btn-default, .panel-pagination ul li .btn-link {background:linear-gradient(to bottom, #E4E4E4 1%, #FEFEFE 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);}
+.panel-buttons ul li .btn.btn-default:not([disabled]):not(.disabled):hover, .panel-pagination ul li .btn-link:not([disabled]):not(.disabled):hover{background:linear-gradient(to bottom, #FEFEFE 1%, #E4E4E4 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);}
+.panel-buttons ul li .btn.btn-primary{background:linear-gradient(to bottom, #3276B1 1%, #8CD5FF 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);}
+.panel-buttons ul li .btn.btn-primary:not([disabled]):not(.disabled):hover{background:linear-gradient(to bottom, #8CD5FF 1%, #3276B1 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);}
+.panel-buttons ul li:last-child .btn, .panel-pagination ul li:last-child .btn-link{border-top-right-radius:4px;}
+.panel-pagination ul li span{border:none;padding:0;}
+
+.ellipsis-bordered > span {background:#EEE;display: inline-block;line-height: 0;padding: 0 8px 0;color:#aaa;}
+.panel .navbar.navbar-default {margin-bottom:0;border-left:0;border-right:0;}
+
+.panel .panel-body.thumbnail-container{margin-bottom:-20px;}
+.panel .panel-body.thumbnail-container ul{margin-bottom:0;}
+
+.panel > form:last-child > table.table-bordered:last-child, .panel > form:last-child > fieldset > table.table-bordered:last-child{margin-bottom:0;}
+.panel > form > table.table-bordered, .panel > form > fieldset > table.table-bordered{border-left-width:0;border-right-width:0;}
+.panel > form > fieldset > table.table-bordered:last-child{border-bottom-width:0;}
+.panel > form + table.table-bordered{border-top:1px solid #ddd;}
+
+.panel > form > table.table-bordered > thead > tr > th:first-child, .panel > form > table.table-bordered > tbody > tr > td:first-child,
+.panel > form > fieldset > table.table-bordered > thead > tr > th:first-child, .panel > form > fieldset > table.table-bordered > tbody > tr > td:first-child{border-left-width:0;}
+.panel > form > table.table-bordered > thead > tr > th:last-child, .panel > form > table.table-bordered > tbody > tr > td:last-child,
+.panel > form > fieldset > table.table-bordered > thead > tr > th:last-child, .panel > form > fieldset > table.table-bordered > tbody > tr > td:last-child{border-right-width:0;}
+.panel > form > table.table-bordered > tbody > tr:last-child > td, .panel > form > fieldset > table.table-bordered > tbody > tr:last-child > td{border-bottom-width:0;}
+
+/*Adding style from bootstrap 3.0 which is removed in 3.1.1 */
+.form-control-static {margin-top: 7px;}
+
+.header-col{position: inherit;}
+@media (min-width:768px) and (max-width:991px) {
+    .pull-right-sm{float:right;padding-right:10px;}
+    .button-bar-container{position:absolute;left:0;top:5px;width:100%; height:0;}
+    .button-bar{right:15px;}
+}
+@media (min-width:992px) and (max-width:1199px){
+    .pull-right-md {float:right;padding-right:20px;}
+    .button-bar-container{position:absolute;left:0;top:5px;width:100%; height:0;}
+    .button-bar{right:15px;}
+}
+@media (min-width:1200px) {
+    .pull-right-lg {float:right;padding-right:20px;}
+    .button-bar-container{position:absolute;top:5px;width:1140px; height:0;}
+}
+/*Firefox specific style*/
+@-moz-document url-prefix() {
+    .panel-buttons ul li .btn, .panel-pagination ul li .btn-link{padding:6px 12px 7px;}
+    #menu-search{position: relative; margin-bottom: -30px; top: 10px;} //This is a hack. Need to be fixed.
+}
+
+th.tablesorter-header:hover {background-color: #ebebeb; cursor:pointer;}
+
+.overflow-x {
+    overflow-x:scroll;
+}
+.caroufredsel_wrapper {
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+ul.info-tiles li > table.info-tile-table tr td:first-child, ul.info-tiles li > table.info-tile-table tr th:first-child{padding-left:0;text-align:right;}
+ul.info-tiles li > table.info-tile-table tr th{font-size:13px;font-weight:700;}
+ul.info-tiles li > table.info-tile-table tr td, ul.info-tiles li > table.info-tile-table tr th{padding-left:10px;}
+
+.inline{display:inline;}
+
+/*Styling to add an arrow in case of dropdown-menu*/
+.dropdown-menu-arrow:before {
+  position: absolute;
+  top: -7px;
+  left: 31px;
+  display: inline-block;
+  border-right: 7px solid transparent;
+  border-bottom: 7px solid #ccc;
+  border-left: 7px solid transparent;
+  border-bottom-color: rgba(0, 0, 0, 0.2);
+  content: '';
+}
+.dropdown-menu-arrow:after {
+  position: absolute;
+  top: -6px;
+  left: 32px;
+  display: inline-block;
+  border-right: 6px solid transparent;
+  border-bottom: 6px solid #ffffff;
+  border-left: 6px solid transparent;
+  content: '';
+}
+.add-warning{
+  margin: 10px 8px 5px 0px;
+}
+#website-images .img {
+  max-height: 110px;
+}
+.custom-dropdown a {
+  color:#ffffff!important;
+}
+.custom-dropdown li a:hover,
+.custom-dropdown li a:focus {
+  color: #ffffff;
+  background-color: #82ADD7!important;
+}
+input:focus {
+  outline: none;
+  box-shadow: 0px 0px 5px #d43f3a;
+  border-color: #82ADD7!important;
+}
+.col-fixed-width {
+  width:70px!important;
+}
+input, select {
+  box-shadow: 0px 0px 5px #d43f3a;
+  border-color: #82ADD7!important;
+}
+li.btn.btn-danger.btn-block {
+  margin-top: 1px;
+  margin-bottom: 1px;
+}
+.dropdown-menu {
+  padding:0px;
+}
+
+.form-signin {
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+}
+.form-signin .checkbox {
+  margin-bottom: 10px;
+}
+.form-signin .checkbox {
+  font-weight: normal;
+}
+.form-signin .form-control {
+  position: relative;
+  height: auto;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px;
+  font-size: 16px;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+.form-signin input[type="text"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+.form-signin .form-signin-heading {
+  font-size:30px;
+}
+.well-sm {
+  padding:2px!important;
+}
+.well {
+  margin-bottom: 0px!important;
+}
+.modal-header .close {
+  margin-top: 5px!important;
+  margin-right: 10px!important;
+  color: #d2322d;
+}
+.navbar-brand {
+  padding:0px!important;
+}
+.navbar-brand > img {
+  height:100%;
+}

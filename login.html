@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POS</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <a href="#" class="navbar-brand"><img src="images/logo.png" alt="Company Logo"></a>
+        </div>
+      </div>
+    </nav>
+    <div id="wrapper">
+    <div class="container-fluid">
+
+      <form class="form-signin" role="form">
+        <div class="panel panel-default">
+          <div class="panel-heading text-center">
+            <span class="panel-title form-signin-heading">Please sign in</span>
+          </div>
+          <div class="panel-body">
+            <input type="text" class="form-control" placeholder="User Name" autofocus="">
+            <input type="password" class="form-control" placeholder="Password">
+            <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+            <!-- a href="#">Forget Password</a> -->
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="modal fade change-password" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header well well-sm text-center">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h2 class="modal-title" id="myModalLabel">Change Password</h2>
+          </div>
+          <div class="modal-body">
+            <form method="post" action="" class="form-vertical">
+              <div class="row">
+                <div class="col-lg-6 col-md-7 col-sm-8">
+                  <div class="form-group">
+                    <label for="emailId">User Name</label>
+                      <input type="userName" name="userName" id="user" value="Jhon Smith" class="form-control" disabled>
+                  </div>
+                  <div class="form-group">
+                    <label for="currentPassword">Current Password</label>
+                    <input type="password" name="currentPassword" id="currentPassword" class="form-control" autofocus=""/>
+                  </div>
+                  <div class="form-group">
+                    <label for="newPassword">New Password</label>
+                    <input type="password" name="newPassword" id="newPassword" class="form-control"/>
+                  </div>
+                  <div class="form-group">
+                    <label for="confirmNewPassword">Confirm New Password</label>
+                    <input type="password" name="confirmNewPassword" id="confirmNewPassword" class="form-control"/>
+                  </div>
+                  <button type="submit" class="btn btn-danger">Save</button>
+                </div>
+              </div>
+            </form>
+            </div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- wrapper -->
+    
+    <!-- Core Scripts - Include with every page -->
+    <script type="text/javascript" src="js/jquery-1.10.2.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/table-fixed-header.js"></script>
+    <script type="text/javascript" src="js/jquery.fixedheadertable-3.0.4.js"></script>
+    <script type="text/javascript" src="js/bootstrap-datepicker.js"></script>
+    <script type="text/javascript" src="js/bootstrap-modal.js"></script>
+    <script type="text/javascript" src="js/bootstrap-modalmanager.js"></script>
+    <script type="text/javascript" src="js/custom_js.js"></script>
+  
+  </body>
+    
+</html>
